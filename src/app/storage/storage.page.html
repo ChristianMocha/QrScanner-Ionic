@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>storage</ion-title>
+  </ion-toolbar>
+
+  
+</ion-header>
+
+<ion-content>
+  <h2>hola</h2>
+  <ion-button (click)="atras()">atras</ion-button>
+
+
+  <div>
+    <ion-list>
+
+      <ion-item *ngFor="let registro  of dataLocal.guardados" detail>
+        <ion-icon slot="start" name="globe"></ion-icon>
+        <ion-label>
+          <h2>{{registro.text}}</h2>
+          <p>{{registro.created}}</p>
+        </ion-label>
+      </ion-item>
+
+    </ion-list>
+  </div>
+
+</ion-content>

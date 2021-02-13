@@ -7,14 +7,25 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <ion-button color="primary"(click)="qr()">QR</ion-button>
+
+
+  <!-- <h2>{{dato | json}}</h2> -->
+
+  <div *ngIf="objecto">
+
+    <h3>{{objecto | json}}</h3>
+    <h3>{{objecto.type | json }}</h3>
+    <h3>{{objecto.data | json }}</h3>
+
   </div>
+
+  <ion-button (click)="ir()">Ir a la página 2</ion-button>
+
+
+
+ 
+
+
 </ion-content>
